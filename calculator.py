@@ -44,7 +44,7 @@ for i, calc in enumerate(st.session_state["calc_data"]):
     # Delete button
     if st.sidebar.button(f"Delete", key=f"delete_button_{i}"):
         del st.session_state["calc_data"][i]
-        st.experimental_rerun()  # Rerun the app after deletion to update UI
+        st.rerun()  # Rerun the app after deletion to update UI
 
 st.title("Chemical Mass Calculator")
 
