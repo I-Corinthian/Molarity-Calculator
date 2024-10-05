@@ -3,7 +3,7 @@ import pandas as pd
 
 
 def get_data(Compound_Name):
-    data = pd.read_csv("chemical_molarity\chemicals_data.csv")  
+    data = pd.read_csv("chemicals_data.csv")  
     data.set_index('Compound Name', inplace=True) 
     value = data.loc[Compound_Name]
     return (value['Molecular Weight'], value['Molecular Formula'])
@@ -48,7 +48,7 @@ for i, calc in enumerate(st.session_state["calc_data"]):
 
 st.title("Chemical Mass Calculator")
 
-compound_names = pd.read_csv("chemical_molarity\chemicals_data.csv")['Compound Name'].tolist()
+compound_names = pd.read_csv("chemicals_data.csv")['Compound Name'].tolist()
 
 if st.session_state['edit_index'] is not None:
     edit_index = st.session_state['edit_index']
