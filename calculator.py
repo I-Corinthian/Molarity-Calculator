@@ -54,15 +54,15 @@ if st.session_state['edit_index'] is not None:
     edit_index = st.session_state['edit_index']
     edit_data = st.session_state['edit_data']
     compound_name = st.selectbox("Component Name", options=compound_names, index=compound_names.index(edit_data['Compound']))
-    volume = st.number_input("Desired Final Volume (double tap to select all)", min_value=0.0, value=edit_data['Volume'], format="%.6f")
+    volume = st.number_input("Desired Final Volume(double tap to select all)", min_value=0.0, value=edit_data['Volume'], format="%.6f")
     volume_unit = st.selectbox("Volume Unit", ['L', 'mL', 'μL'])
-    concentration = st.number_input("Desired Concentration (double tap to select all)", min_value=0.0, value=edit_data['Concentration'], format="%.12f")
+    concentration = st.number_input("Desired Concentration(double tap to select all)", min_value=0.0, value=edit_data['Concentration'], format="%.12f")
     concentration_unit = st.selectbox("Concentration Unit", ['M', 'mM', 'μM', 'nM', 'pM', 'fM'])
 else:
     compound_name = st.selectbox("Component Name", options=compound_names)
-    volume = st.number_input("Desired Final Volume (double tap to select all)", min_value=0.0, format="%.6f")
+    volume = st.number_input("Desired Final Volume(double tap to select all)", min_value=0.0, format="%.6f")
     volume_unit = st.selectbox("Volume Unit", ['L', 'mL', 'μL'])
-    concentration = st.number_input("Desired Concentration (double tap to select all)", min_value=0.0, format="%.12f")
+    concentration = st.number_input("Desired Concentration(double tap to select all)", min_value=0.0, format="%.12f")
     concentration_unit = st.selectbox("Concentration Unit", ['M', 'mM', 'μM', 'nM', 'pM', 'fM'])
 
 
